@@ -92,7 +92,7 @@ CREATE TABLE "Cart Junction" (
 
 
 ## FRONTEND
--Dependencies: 
+- Dependencies: 
     -React
     -React-Redux
     -React-Router
