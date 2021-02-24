@@ -38,6 +38,7 @@ CREATE TABLE "Product" (
 	"product_price" serial NOT NULL,
 	"stock_amount" INT NOT NULL,
 	"in_stock" BOOLEAN NOT NULL,
+  "customer_id" INT REFERENCES "Users"("user_id")
 	CONSTRAINT "Product_pk" PRIMARY KEY ("product_id")
 ) WITH (
   OIDS=FALSE
@@ -45,26 +46,6 @@ CREATE TABLE "Product" (
 
 
 
-CREATE TABLE "Purchases" (
-	"customer_id" SERIAL PRIMARY KEY,
-	"product_name" VARCHAR(25) NOT NULL,
-	"product_id" serial NOT NULL,
-	"amount" INT NOT NULL,
-	CONSTRAINT "Purchases_pk" PRIMARY KEY ("customer_id")
-) WITH (
-  OIDS=FALSE
-);
-
-
-
-CREATE TABLE "Cart" (
-	"cart_id" SERIAL PRIMARY KEY NOT NULL,
-	"isActive" BOOLEAN NOT NULL,
-	"exp_on" DATE NOT NULL,
-	CONSTRAINT "Cart_pk" PRIMARY KEY ("cart_id")
-) WITH (
-  OIDS=FALSE
-);
 
 
 ```
@@ -87,5 +68,43 @@ CREATE TABLE "Cart" (
 - deleteOrder
 
 
+- File Structure:
+  - Server/
+    - index.js
+    - controllers/
+      - authController.js
+      - productsController.js
+      - CartController.js
+
 
 ## FRONTEND
+-Dependencies 
+  -React
+  -React-Redux
+  -React-Router
+  -Redux
+  -Redux-middleware
+  -Material UI
+  -Axios
+
+
+- File Structure 
+  - src/
+  - Files that comes with creat-react-app
+  - routes.js
+  - componenets/
+    - Cart.js
+    - Main.js
+    - Products.js
+    - Header.js
+    - Auth.js
+    - Footer.js
+  -Redux
+    -reducer
+    -store
+
+
+
+  
+
+
