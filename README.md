@@ -39,10 +39,24 @@ CREATE TABLE "Product" (
 	"stock_amount" INT NOT NULL,
 	"in_stock" BOOLEAN NOT NULL,
   "customer_id" INT REFERENCES "Users"("user_id")
+  -- "product_id" INT REFERENCES "Users"("user_id")
 	CONSTRAINT "Product_pk" PRIMARY KEY ("product_id")
 ) WITH (
   OIDS=FALSE
 );
+
+CREATE TABLE "Cart Junction" (
+	"cart_id" VARCHAR(255) NOT NULL,
+	"quantity" INT NOT NULL,
+	"product_id" VARCHAR(25) NOT NULL,
+  -- "customer_id" INT REFERENCES "Users"("user_id")
+  "cart_id" INT REFERENCES "Users"("user_id")
+	CONSTRAINT "Cart Junction_pk" PRIMARY KEY ("cart_id")
+) WITH (
+  OIDS=FALSE
+);
+
+
 
 
 
