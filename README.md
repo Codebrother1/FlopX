@@ -93,13 +93,13 @@ CREATE TABLE "Cart Junction" (
 
 ## FRONTEND
 - Dependencies: 
-    -React
-    -React-Redux
-    -React-Router
-    -Redux
-    -Redux-middleware
-    -Material UI
-    -Axios
+  - React
+  - React-Redux
+  - React-Router
+  - Redux
+  - Redux-middleware
+  - Material UI
+  - Axios
 
 
 - File Structure: 
