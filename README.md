@@ -92,17 +92,17 @@ CREATE TABLE "Cart Junction" (
 
 
 ## FRONTEND
--Dependencies 
-  -React
-  -React-Redux
-  -React-Router
-  -Redux
-  -Redux-middleware
-  -Material UI
-  -Axios
+-Dependencies: 
+    -React
+    -React-Redux
+    -React-Router
+    -Redux
+    -Redux-middleware
+    -Material UI
+    -Axios
 
 
-- File Structure 
+- File Structure: 
   - src/
   - Files that comes with creat-react-app
   - routes.js
